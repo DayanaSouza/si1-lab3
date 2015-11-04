@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Garagem Musical </title>
+   
+
+    <!-- Bootstrap Core CSS -->
+    <link href="@routes.Assets.versioned("stylesheets/bootstrap.css")" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="@routes.Assets.versioned("stylesheets/heroic-features.css")" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1> <a href="@routes.Application.index" class=""> Garagem Musical </a> </h1>
+             <p>
+            <a class="btn btn-primary btn-large" href="@routes.Application.cadastro" class=""> 
+            Crie seu anúncio </a>
+            
+
+	        <a class="btn btn-primary btn-large" href="@routes.Application.login" class="">     
+	        Login </a>
+            
+
+            <a class="btn btn-primary btn-large" href="@routes.Application.sobre" class="">
+            Sobre </a>
+            
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        
+
+        
+        <form class="form-horizontal" action="/novoAnuncio" method="POST" >
+        <fieldset>
+
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Título</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="titulo" class="form-control input-md">
+    
+          </div>
+        </div>
+
+
+        <!-- Text input-->
+        <div class="form-group">
+        <label class="col-md-4 control-label" for="cidade">Cidade</label>  
+          <div class="col-md-4">
+          <input id="cidade" name="cidade" type="text" placeholder="cidade" class="form-control input-md">
+    
+         </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+        <label class="col-md-4 control-label" for="bairro">Bairro</label>  
+         <div class="col-md-4">
+         <input id="bairro" name="bairro" type="text" placeholder="bairro" class="form-control input-md">
+    
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+        <label class="col-md-4 control-label" for="email">Email</label>  
+         <div class="col-md-4">
+         <input id="email" name="email" type="text" placeholder="email" class="form-control input-md">
+         </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="descricao">Descreva seu anúncio: </label>  
+          <div class="col-md-8">
+         <input id="descricao" name="descricao" type="text" placeholder="" class="form-control input-md">
+    
+         </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+         <label class="col-md-4 control-label" for="radios">Você toca algum desses instrumentos?</label>
+         <div class="col-md-4"> 
+           <label class="radio-inline" for="radios-0">
+             <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+             Violão
+           </label> 
+           <label class="radio-inline" for="radios-1">
+             <input type="radio" name="radios" id="radios-1" value="2">
+             Guitarra
+           </label> 
+           <label class="radio-inline" for="radios-2">
+             <input type="radio" name="radios" id="radios-2" value="3">
+             Sanfona
+           </label> 
+           <label class="radio-inline" for="radios-3">
+             <input type="radio" name="radios" id="radios-3" value="4">
+             Outros
+           </label>
+         </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="outros">Se você marcou a opção outros, digite aqui ao menos um instrumento que você toca:</label>  
+          <div class="col-md-4">
+          <input id="outros" name="outros" type="text" placeholder="" class="form-control input-md">
+    
+         </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+        <label class="col-md-4 control-label" for="estiloPreferido">Que estilo musical você prefere?</label>
+         <div class="col-md-4"> 
+          <label class="radio-inline" for="estiloPreferido-0">
+            <input type="radio" name="estiloPreferido" id="estiloPreferido-0" value="1" checked="checked">
+              MPB
+            </label> 
+            <label class="radio-inline" for="estiloPreferido-1">
+              <input type="radio" name="estiloPreferido" id="estiloPreferido-1" value="2">
+              Rock
+            </label> 
+            <label class="radio-inline" for="estiloPreferido-2">
+              <input type="radio" name="estiloPreferido" id="estiloPreferido-2" value="3">
+             Forró
+          </label> 
+           <label class="radio-inline" for="estiloPreferido-3">
+            <input type="radio" name="estiloPreferido" id="estiloPreferido-3" value="4">
+            Axé Music
+          </label> 
+          <label class="radio-inline" for="estiloPreferido-4">
+            <input type="radio" name="estiloPreferido" id="estiloPreferido-4" value="5">
+            Samba
+          </label>
+         </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+         <label class="col-md-4 control-label" for="estiloNPrefere">Que estilo musical você não prefere?</label>
+         <div class="col-md-4"> 
+            <label class="radio-inline" for="estiloNPrefere-0">
+             <input type="radio" name="estiloNPrefere" id="estiloNPrefere-0" value="1" checked="checked">
+              MPB
+            </label> 
+            <label class="radio-inline" for="estiloNPrefere-1">
+              <input type="radio" name="estiloNPrefere" id="estiloNPrefere-1" value="2">
+              Rock
+            </label> 
+            <label class="radio-inline" for="estiloNPrefere-2">
+             <input type="radio" name="estiloNPrefere" id="estiloNPrefere-2" value="3">
+             Forró
+           </label> 
+           <label class="radio-inline" for="estiloNPrefere-3">
+             <input type="radio" name="estiloNPrefere" id="estiloNPrefere-3" value="4">
+             Axé Music
+           </label> 
+           <label class="radio-inline" for="estiloNPrefere-4">
+             <input type="radio" name="estiloNPrefere" id="estiloNPrefere-4" value="5">
+             Samba
+           </label>
+         </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="ocasionalmenteOuBanda">Você procura tocar ocasionalmente ou formar banda?</label>
+         <div class="col-md-4"> 
+           <label class="radio-inline" for="ocasionalmenteOuBanda-0">
+             <input type="radio" name="ocasionalmenteOuBanda" id="ocasionalmenteOuBanda-0" value="1" checked="checked">
+             Tocar ocasionalmente
+            </label> 
+           <label class="radio-inline" for="ocasionalmenteOuBanda-1">
+             <input type="radio" name="ocasionalmenteOuBanda" id="ocasionalmenteOuBanda-1" value="2">
+             Formar uma banda
+           </label>
+          </div>
+        </div>
+
+        <button id="botaoEnviar" name="botaoEnviar" class="btn btn-primary">Enviar</button>
+
+        
+</fieldset>
+</form>
+
+           
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Garagem Musical &copy; 2015</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
